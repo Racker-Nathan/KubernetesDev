@@ -16,4 +16,4 @@ spec:
       - name: webdev
         image: rackernathan/nginx:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
