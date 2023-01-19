@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webdev
+spec:
+  selector:
+    matchLabels:
+      app: webdev
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: webdev
+    spec:
+      containers:
+      - name: webdev
+        image: rackernathan/nginx:latest
+        ports:
+        - containerPort: 8080
